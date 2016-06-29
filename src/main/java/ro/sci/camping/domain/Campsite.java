@@ -1,15 +1,13 @@
 package ro.sci.camping.domain;
 
-import java.awt.image.BufferedImage;
 import java.io.File;
-
 
 public class Campsite extends AbstractModel{
 
 	//User user sau userID?;
 	String name;
 	Region region;
-	//String villageCity; //Not necessary for search 
+	String villageCity; //Not necessary for search 
 	CampsiteLocation campsiteLocation;
 	
 	

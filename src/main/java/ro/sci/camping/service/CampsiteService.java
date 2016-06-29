@@ -21,9 +21,25 @@ public class CampsiteService {
 		return dao.getAll();
 	}
 	
-	public Collection<Campsite> serach(String query){
+	//search by campsite name 
+	public Collection<Campsite> serachByName(String query){
 		LOGGER.debug("Seraching for " + query);
 		return dao.searchByName(query);
+	}
+	
+	//search by campsite id - cand dau click pe un campsite de pe harta 
+	//trebuie sa ma duca la campsite-ul cu id-ul respectiv
+	//nu stiu daca e necesar search pentru asta, in sensul ca dai click pe campsite
+	//si te se genereaza dinamic pagina respectiva
+	public Collection<Campsite> searchById(Long id){
+		//LOGGER.debug("Seraching for " + query);
+		return dao.searchById(id);
+	}
+
+	//search by region - when clicking on the map region
+	public Collection<Campsite> searchByRegion(String query){
+		LOGGER.debug("Searching for "+query);
+		return dao.searchByRegion(query);
 	}
 	
 	public boolean delete(Long id){
